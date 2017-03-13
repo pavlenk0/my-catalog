@@ -1,0 +1,15 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2 {
+    color: #3CB371;
+    font-family: 'Architects Daughter', cursive;
+}
+
+body {
+    padding-left: 15px;
+    color: #105775;
+    background: #FFA07A;
