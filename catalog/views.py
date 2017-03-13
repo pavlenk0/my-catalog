@@ -7,7 +7,6 @@ def index(request):
     """
     View function for home page of site.
     """
-    # Generate counts of some of the main objects
     num_books = Book.objects.all().count()
     num_instances = BookInstance.objects.all().count()
     # Available books (status = 'a')
@@ -16,7 +15,6 @@ def index(request):
     num_genres = Genre.objects.count()
     num_word = Book.objects.filter(title__contains='Harry').count()
 
-    # Render the HTML template index.html with the data in the context variable
     return render(
         request,
         'index.html',
@@ -33,3 +31,12 @@ class BookListView(generic.ListView):
 
 class BookDetailView(generic.DetailView):
     model = Book
+
+
+class AuthorListView(generic.ListView):
+    model = Author
+    paginate_by = 3
+
+
+class AuthorDetailView(generic.DetailView):
+    model = Author
