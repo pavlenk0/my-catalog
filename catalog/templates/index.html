@@ -21,4 +21,7 @@
     <li><strong><form>Books contain word 'Harry':</strong> {{ num_word }}</li>
   </ul>
 
+<div style="font-size: smaller; text-align: bottom; color: black;">
+    <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+</div>
 {% endblock %}
