@@ -12,6 +12,7 @@
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <h1>Local Library</h1>
 </head>
 
 <body>
@@ -25,6 +26,7 @@
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'books' %}">All books</a></li>
             <li><a href="{% url 'authors' %}">All authors</a></li>
+            <hr>
           </ul>
 
           <ul class="sidebar-nav">
